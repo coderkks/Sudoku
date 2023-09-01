@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="sudoku_style.css">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <h1 class="heading">Sudoku Solver</h1>
+        </div>
+    </header>
+    <div class="middle">
+        <div class="container">
+            <div class="square" id="square1">
+                <div class="block" contenteditable="true" id="block_s1_1"></div>
+                <div class="block" contenteditable="true" id="block_s1_2"></div>
+                <div class="block" contenteditable="true" id="block_s1_3"></div>
+                <div class="block" contenteditable="true" id="block_s1_4"></div>
+                <div class="block" contenteditable="true" id="block_s1_5"></div>
+                <div class="block" contenteditable="true" id="block_s1_6"></div>
+                <div class="block" contenteditable="true" id="block_s1_7"></div>
+                <div class="block" contenteditable="true" id="block_s1_8"></div>
+                <div class="block" contenteditable="true" id="block_s1_9"></div>
+            </div>
+            <div class="square" id="square2">
+                <div class="block" contenteditable="true" id="block_s2_1"></div>
+                <div class="block" contenteditable="true" id="block_s2_2"></div>
+                <div class="block" contenteditable="true" id="block_s2_3"></div>
+                <div class="block" contenteditable="true" id="block_s2_4"></div>
+                <div class="block" contenteditable="true" id="block_s2_5"></div>
+                <div class="block" contenteditable="true" id="block_s2_6"></div>
+                <div class="block" contenteditable="true" id="block_s2_7"></div>
+                <div class="block" contenteditable="true" id="block_s2_8"></div>
+                <div class="block" contenteditable="true" id="block_s2_9"></div>
+            </div>
+            <div class="square" id="square3">
+                <div class="block" contenteditable="true" id="block_s3_1"></div>
+                <div class="block" contenteditable="true" id="block_s3_2"></div>
+                <div class="block" contenteditable="true" id="block_s3_3"></div>
+                <div class="block" contenteditable="true" id="block_s3_4"></div>
+                <div class="block" contenteditable="true" id="block_s3_5"></div>
+                <div class="block" contenteditable="true" id="block_s3_6"></div>
+                <div class="block" contenteditable="true" id="block_s3_7"></div>
+                <div class="block" contenteditable="true" id="block_s3_8"></div>
+                <div class="block" contenteditable="true" id="block_s3_9"></div>
+            </div>
+            <div class="square" id="square4">
+                <div class="block" contenteditable="true" id="block_s4_1"></div>
+                <div class="block" contenteditable="true" id="block_s4_2"></div>
+                <div class="block" contenteditable="true" id="block_s4_3"></div>
+                <div class="block" contenteditable="true" id="block_s4_4"></div>
+                <div class="block" contenteditable="true" id="block_s4_5"></div>
+                <div class="block" contenteditable="true" id="block_s4_6"></div>
+                <div class="block" contenteditable="true" id="block_s4_7"></div>
+                <div class="block" contenteditable="true" id="block_s4_8"></div>
+                <div class="block" contenteditable="true" id="block_s4_9"></div>
+            </div>
+            <div class="square" id="square5">
+                <div class="block" contenteditable="true" id="block_s5_1"></div>
+                <div class="block" contenteditable="true" id="block_s5_2"></div>
+                <div class="block" contenteditable="true" id="block_s5_3"></div>
+                <div class="block" contenteditable="true" id="block_s5_4"></div>
+                <div class="block" contenteditable="true" id="block_s5_5"></div>
+                <div class="block" contenteditable="true" id="block_s5_6"></div>
+                <div class="block" contenteditable="true" id="block_s5_7"></div>
+                <div class="block" contenteditable="true" id="block_s5_8"></div>
+                <div class="block" contenteditable="true" id="block_s5_9"></div>
+            </div>
+            <div class="square" id="square6">
+                <div class="block" contenteditable="true" id="block_s6_1"></div>
+                <div class="block" contenteditable="true" id="block_s6_2"></div>
+                <div class="block" contenteditable="true" id="block_s6_3"></div>
+                <div class="block" contenteditable="true" id="block_s6_4"></div>
+                <div class="block" contenteditable="true" id="block_s6_5"></div>
+                <div class="block" contenteditable="true" id="block_s6_6"></div>
+                <div class="block" contenteditable="true" id="block_s6_7"></div>
+                <div class="block" contenteditable="true" id="block_s6_8"></div>
+                <div class="block" contenteditable="true" id="block_s6_9"></div>
+            </div>
+            <div class="square" id="square7">
+                <div class="block" contenteditable="true" id="block_s7_1"></div>
+                <div class="block" contenteditable="true" id="block_s7_2"></div>
+                <div class="block" contenteditable="true" id="block_s7_3"></div>
+                <div class="block" contenteditable="true" id="block_s7_4"></div>
+                <div class="block" contenteditable="true" id="block_s7_5"></div>
+                <div class="block" contenteditable="true" id="block_s7_6"></div>
+                <div class="block" contenteditable="true" id="block_s7_7"></div>
+                <div class="block" contenteditable="true" id="block_s7_8"></div>
+                <div class="block" contenteditable="true" id="block_s7_9"></div>
+            </div>
+            <div class="square" id="square8">
+                <div class="block" contenteditable="true" id="block_s8_1"></div>
+                <div class="block" contenteditable="true" id="block_s8_2"></div>
+                <div class="block" contenteditable="true" id="block_s8_3"></div>
+                <div class="block" contenteditable="true" id="block_s8_4"></div>
+                <div class="block" contenteditable="true" id="block_s8_5"></div>
+                <div class="block" contenteditable="true" id="block_s8_6"></div>
+                <div class="block" contenteditable="true" id="block_s8_7"></div>
+                <div class="block" contenteditable="true" id="block_s8_8"></div>
+                <div class="block" contenteditable="true" id="block_s8_9"></div>
+            </div>
+            <div class="square" id="square9">
+                <div class="block" contenteditable="true" id="block_s9_1"></div>
+                <div class="block" contenteditable="true" id="block_s9_2"></div>
+                <div class="block" contenteditable="true" id="block_s9_3"></div>
+                <div class="block" contenteditable="true" id="block_s9_4"></div>
+                <div class="block" contenteditable="true" id="block_s9_5"></div>
+                <div class="block" contenteditable="true" id="block_s9_6"></div>
+                <div class="block" contenteditable="true" id="block_s9_7"></div>
+                <div class="block" contenteditable="true" id="block_s9_8"></div>
+                <div class="block" contenteditable="true" id="block_s9_9"></div>
+            </div>
+        </div>
+        
+        <div class="bottom1">
+            <button class="btn" id="donebtn">Done</button>
+            <button class="btn" id="solvebtn">Solve</button>
+            <button class="btn" id="resetbtn">Reset</button>
+            <button class="btn" id="clearbtn">Clear</button>
+        </div>
+    </div>
+    
+
+    <div class="bottom">
+        <div class="bottom2">
+            <button class="btn1" id="savebtn">Save To Storage</button>
+
+            <div id="savedfilesdk">
+                <button class="btn1" id="savedfilebtn">Saved Files(Sudoku)</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="sudoku_script.js"></script>
+</body>
+
+</html>
